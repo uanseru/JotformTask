@@ -20,3 +20,11 @@ sleep 3.00
 browser.button(css: 'div#cid_3 > div > div:nth-of-type(3) > button:nth-of-type(2)').click
 sleep 3.00
 
+# Using a Css selector to click the next button
+browser.button(css: 'div#cid_3 > div > div:nth-of-type(3) > button:nth-of-type(2)').click
+sleep 3.00
+
+browser.span(css: 'div#cardProgress > div > div:nth-of-type(4) > div > div > span').click
+
+#browser.button(class: 'jfInput-button forNext u-right').click
+sleep 3.00
