@@ -1,8 +1,13 @@
 require 'watir'
+require 'rspec'
+
+
 browser = Watir::Browser.new
+
 
 # Goes straight to the website
 browser.goto("https://form.jotform.com/201882323530347")
+
 
 # delays the pace of the test (to ensure a happy path its important to have these breaks to counter for slow systems)
 sleep 3.00
@@ -22,11 +27,19 @@ sleep 3.00
 
 # Using a Css selector to click the next button
 browser.button(css: 'div#cid_3 > div > div:nth-of-type(3) > button:nth-of-type(2)').click
+sleep 4.00
+
+
+
+# click on Upload file button
+browser.div(class: 'inputContainer').wait_until(timeout: 100, &:present?).click
+
+sleep 4.00
+
+#upload the screenshot
+browser.file_field.set "/Users/admin/Desktop/screenshot.png"
+
 sleep 3.00
-
-# Upload file  (TODO)
-
-
 # Using a Xpath selector to Click on next button
 button = browser.div(class: /jfCard-actions/).button(xpath: '//li[2]//div[1]//div[1]//div[3]//button[2]').wait_until(timeout: 100, &:present?)
 button.fire_event :onclick
@@ -82,6 +95,6 @@ submit.fire_event :onclick
 sleep 4.00
 
 #Assert if form has been submitted
-#browser.text.include?('Your submission has been received!').should == true
+#{browser.text.include?("Your submission has been received!").should == true}"
 
 
