@@ -1,0 +1,6 @@
+bin/bash -c "env RBENV_VERSION=2.5.8 /usr/local/Cellar/rbenv/1.1.2/libexec/rbenv exec ruby /Users/admin/RubymineProjects/testing123/Jotform.rb"
+2020-07-30 17:45:08 WARN Watir [DEPRECATION] ["class_array"] Using the :class locator to locate multiple classes with a String value (i.e. "selected today") is deprecated. Use Array (e.g. ["selected", "today"]) instead.
+2020-07-30 17:45:33 WARN Watir [DEPRECATION] ["class_array"] Using the :class locator to locate multiple classes with a String value (i.e. "jfThankYou-header form-header") is deprecated. Use Array (e.g. ["jfThankYou-header", "form-header"]) instead.
+2020-07-30 17:45:33 WARN Watir [DEPRECATION] ["wait_until_present"] Watir::Heading#wait_until_present is deprecated. Use Watir::Heading#wait_until(&:present?) instead.
+
+Process finished with exit code 0
